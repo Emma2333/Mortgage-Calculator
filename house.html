@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>房贷计算器</title>
+</head>
+<body>
+<form action="show.html" method="post">
+    <table border="1px" cellspacing="0" cellpadding="5px" width="60%">
+        <tr>
+            <td colspan="3" >
+                <span class="title" >房贷计算器</span>
+            </td>
+        </tr>
+        <tr>
+            <td width="15%">平米单价：</td>
+            <td width="45%">
+                <input type="text" id="unitprice" name="unitprice" class="init" >/平米
+            </td>
+            <td width="40%">
+                <span id="unitpriceMsg" class="init"></span>
+            </td>
+        </tr>
+        <tr>
+            <td width="15%">租&nbsp;&nbsp;&nbsp;&nbsp;金：</td>
+            <td width="45%">
+                <input type="text" id="rent" name="rent" class="init" >/平米
+            </td>
+            <td width="40%">
+                <span id="rentMsg" class="init"></span>
+            </td>
+        </tr>
+        <tr>
+            <td width="15%">物业费：</td>
+            <td width="45%">
+                <input type="text" id="cost" name="cost" class="init">/平米
+            </td>
+            <td width="40%">
+                <span id="costMsg" class="init"></span>
+            </td>
+        </tr>
+        <tr>
+            <td width="15%">面&nbsp;&nbsp;&nbsp;&nbsp;积：</td>
+            <td width="45%">
+                <input type="text" id="area" name="area" class="init" >平米
+            </td>
+            <td width="40%">
+                <span id="areaMsg" class="init"></span>
+            </td>
+        <tr>
+            <td>首&nbsp;&nbsp;&nbsp;&nbsp;付：</td>
+            <td>
+                <select name="first" id="first" class="init">
+                    <option value="2">2成</option>
+                    <option value="3">3成</option>
+                    <option value="4" selected>4成</option>
+                    <option value="5">5成</option>
+                    <option value="6">6成</option>
+                    <option value="7">7成</option>
+                    <option value="8">8成</option>
+                    <option value="9">9成</option>
+                </select>
+            </td>
+            <td><span id="firstMsg" class="init"></span></td>
+        </tr>
+        <tr>
+            <td>贷款利息：</td>
+            <td><input type="text" name="interest" id="interest" class="init" ></td>
+            <td><span id="interestMsg" class="init"></span></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <input type="button" value="计算" onclick="cal()">
+                <input type="reset" value="重置">
+            </td>
+        </tr>
+    </table>
+</form>
+<br>
+<div id="result">
+    <table>
+        <tr>
+            <td colspan="2" ><span class="title" >计算结果</span></td>
+        </tr>
+        <tr>
+            <td>首付金额：</td>
+            <td><span id="firstResult"></span></td>
+        </tr>
+        <tr>
+            <td>贷款总额：</td>
+            <td><span id="totalResult"></span></td>
+        </tr>
+        <tr>
+            <td>每月支付利息：</td>
+            <td><span id="monthResult"></span></td>
+        </tr>
+        <tr>
+            <td>每月租金：</td>
+            <td><span id="rentResult"></span></td>
+        </tr>
+        <tr>
+            <td>每月物业费：</td>
+            <td><span id="costResult"></span></td>
+        </tr>
+    </table>
+</div>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="house.js"></script>
+<script type="text/javascript" src="calculate.js"></script>
+</body>
+</html>

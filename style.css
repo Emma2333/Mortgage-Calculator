@@ -1,0 +1,25 @@
+.init{
+    background: #F2F2F2;
+    font-weight: bold;
+    color: #000000;
+}
+.right{
+    background: #F5F5F5;
+    font-weight: bold;
+    color: green;
+    border: 1px solid green;
+}
+.wrong{
+    border: 1px solid red;
+    background: #F5F5F5;
+    font-weight: bold;
+    color: darkred;
+}
+.title{
+    font-weight: bold;
+    font-size: 18px;
+
+}
+table{
+    background: #FFFFFF;
+}
